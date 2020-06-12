@@ -1,0 +1,25 @@
+{
+  "name": "bort",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "discord.js": "^12.0.1",
+    "dotenv": "^8.2.0",
+    "erela.js": "^1.1.7",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.6",
+    "ms": "^2.1.2"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "trailingComma": "none"
+  }
+}
