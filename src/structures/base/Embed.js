@@ -6,7 +6,6 @@ module.exports = class Embed extends MessageEmbed {
   constructor(data) {
     super(data);
     this.color = def;
-    this.setTimestamp();
   }
 
   /**
