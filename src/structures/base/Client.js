@@ -164,9 +164,8 @@ module.exports = class Bort extends Client {
   /**
    * Initialize the client
    * @param {Boolean} login Whether to login when initializing or not
-   * @param {Boolean} loadWeb Whether to load the custom API or not
    */
-  async init(login = false, loadWeb = true) {
+  async init(login = false) {
     this.cmd.load();
     this.evnt.load();
     await this.connect();

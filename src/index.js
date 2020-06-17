@@ -14,8 +14,8 @@ const client = new Bort({
 
 client.init(true).then((res) => client.logger.log(res.message));
 
-//require("discord.js/src/util/Constants.js").DefaultOptions.ws.properties.$browser =
-//  "Discord iOS";
+require("discord.js/src/util/Constants.js").DefaultOptions.ws.properties.$browser =
+ "Discord iOS";
 
 String.prototype.toProperCase = function () {
   return this.replace(

@@ -15,11 +15,7 @@ module.exports = class EventManager {
       const evnt = new (require(file))();
       if (!evnt.run || !evnt.name) continue;
 
-      if (evnt.type === "dbl")
-        this.client.dbl.on(evnt.name, evnt.run.bind(null, this.client));
-      // else if (evnt.type === "dbl-webhook")
-      //   this.client.dbl.webhook.on(evnt.name, evnt.run.bind(null, this.client));
-      else this.client.on(evnt.name, evnt.run.bind(null, this.client));
+      this.client.on(evnt.name, evnt.run.bind(null, this.client));
 
       this.events.set(evnt.name, evnt);
     }

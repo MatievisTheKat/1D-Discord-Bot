@@ -7,6 +7,8 @@ module.exports = class extends Event {
   }
 
   async run(client) {
+    console.log("ready");
+    
     setStatus(client);
 
     setInterval(() => {
