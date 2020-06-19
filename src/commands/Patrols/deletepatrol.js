@@ -4,7 +4,7 @@ module.exports = class DeleteClan extends Command {
   constructor() {
     super({
       name: "deletepatrol",
-      category: "Patrol",
+      category: "Patrols",
       description: "Delete a patrol",
       usage: "{patrol_name}",
       examples: ["springboks"],

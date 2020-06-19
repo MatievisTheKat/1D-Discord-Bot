@@ -9,23 +9,6 @@ module.exports = class extends Event {
     const snipe = client.snipeMessages.set(msg.channel.id, msg);
     setTimeout(() => snipe.delete(), 10000);
 
-    const data = await client.models.post.findOne({
-      postMessageID: msg.id
-    });
-
-    if (data !== null) {
-      const profile = await client.models.profile.findOne({
-        userID: data.userID
-      });
-
-      if (profile !== null) {
-        profile.postCount--;
-        await profile.save().catch((err) => client.logger.error(err));
-      }
-
-      await data.delete();
-    }
-
     const suggestion = await client.models.suggestion.findOne({
       guildID: msg.guild.id,
       messageID: msg.id

@@ -1,14 +1,13 @@
 const Event = require("../../structures/base/Event");
 const { ErelaClient } = require("erela.js");
 
-module.exports = class extends Event {
+module.exports = class Ready extends Event {
   constructor() {
     super("ready");
   }
 
   async run(client) {
-    console.log("ready");
-    
+  
     setStatus(client);
 
     setInterval(() => {
